@@ -1,0 +1,14 @@
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\obj\Debug\PostKek.Services.csprojResolveAssemblyReference.cache
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Services.dll.config
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Services.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Services.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\EntityFramework.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Data.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Models.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Data.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\PostKek.Models.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\EntityFramework.xml
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\obj\Debug\PostKek.Services.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\obj\Debug\PostKek.Services.pdb

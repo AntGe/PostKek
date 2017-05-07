@@ -1,0 +1,10 @@
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\PostKek.Data.dll.config
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\PostKek.Data.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\PostKek.Data.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\EntityFramework.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\EntityFramework.xml
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\Debug\PostKek.Data.csprojResolveAssemblyReference.cache
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\Debug\PostKek.Data.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\Debug\PostKek.Data.pdb
