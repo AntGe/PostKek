@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using PostKek.Models;
 using PostKek.Models.BindingModels;
+using PostKek.Models.ViewModels;
 using PostKek.Services;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,23 @@ namespace PostKek.Controllers
         {
             return View();
         }
-         
+
+        [HttpGet]
+        [Route("{id:int}")] 
+        public ActionResult SinglePost(int id)
+        {
+            SinglePostVm vm = this.services.GetPostById(id, User.Identity.GetUserId());
+            return View(vm);
+        }
+
+        [HttpGet]
+        [Route("all")]
+        public ActionResult AllPosts()
+        {
+           IEnumerable<SinglePostVm> vms =  this.services.GetAllPosts();
+            return View(vms);
+        }
+
         [HttpGet]
         [Route("add")]
         [Authorize(Roles = "User")]

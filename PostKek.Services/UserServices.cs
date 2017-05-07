@@ -39,7 +39,7 @@ namespace PostKek.Services
         {
             using (this.Context)
             {
-                User toFind = this.Context.Users.First(a => a.IdentityId == id);
+                User toFind = this.Context.Users.FirstOrDefault(a => a.IdentityId == id);
                 if (toFind != null)
                 {
                     return toFind;

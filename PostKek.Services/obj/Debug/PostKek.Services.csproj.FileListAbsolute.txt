@@ -12,3 +12,5 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\obj\Debug\PostKek.Services.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\obj\Debug\PostKek.Services.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\AutoMapper.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\AutoMapper.xml

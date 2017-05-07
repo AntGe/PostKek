@@ -86,3 +86,5 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\PostK
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\PostKek.Data.pdb
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\PostKek.Models.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\PostKek.Models.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\AutoMapper.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\AutoMapper.xml
