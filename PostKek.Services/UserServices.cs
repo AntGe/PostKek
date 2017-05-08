@@ -1,4 +1,6 @@
-﻿using PostKek.Data;
+﻿using AutoMapper;
+using PostKek.Data;
+using PostKek.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +49,20 @@ namespace PostKek.Services
                 else return null;
 
             } 
+        }
+
+        public IndexViewModel GetUserVmByLongId(string id)
+        {
+            using (this.Context)
+            {
+                User toFind = this.Context.Users.FirstOrDefault(a => a.IdentityId == id);
+                if (toFind != null)
+                {
+                    return Mapper.Map<User, IndexViewModel>(toFind);
+                }
+                else return null;
+
+            }
         }
 
     }

@@ -3,3 +3,7 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bi
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\obj\Debug\PostKek.Models.csprojResolveAssemblyReference.cache
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\obj\Debug\PostKek.Models.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\obj\Debug\PostKek.Models.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\PostKek.Data.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\EntityFramework.dll
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\PostKek.Data.pdb
+C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\EntityFramework.xml

@@ -35,6 +35,14 @@ namespace PostKek.Services
             }
         }
 
+        public IEnumerable<SingleCommenVm> GetCommentsForPost(int postId)
+        {
+            IEnumerable<Comment> comments = this.Context.Posts.FirstOrDefault(p => p.Id == postId).Comments;
+            IEnumerable<SingleCommenVm> commentVms = Mapper.Map<IEnumerable<Comment>, IEnumerable<SingleCommenVm>>(comments);
+
+            return commentVms;
+        }
+
         public SinglePostVm GetPostById(int id, string userId)
         {
             Post post = this.Context.Posts.FirstOrDefault(c => c.Id == id);

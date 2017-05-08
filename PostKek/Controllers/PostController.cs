@@ -47,6 +47,13 @@ namespace PostKek.Controllers
             return View(vm);
         }
 
+        [HttpGet] 
+        public PartialViewResult GetCommentsForPost(int id)
+        {
+            IEnumerable<SingleCommenVm> vms = this.services.GetCommentsForPost(id);
+            return PartialView("_CommentsSection", vms);
+        }
+
         [HttpGet]
         [Route("all")]
         public ActionResult AllPosts()

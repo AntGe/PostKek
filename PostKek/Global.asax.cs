@@ -26,7 +26,9 @@ namespace PostKek
         {
             Mapper.Initialize(expression =>
             {
-                expression.CreateMap<Post, SinglePostVm>(); 
+                expression.CreateMap<Post, SinglePostVm>();
+                expression.CreateMap<Comment, SingleCommenVm>();
+                expression.CreateMap<User, IndexViewModel>();
             });
         }
     }
