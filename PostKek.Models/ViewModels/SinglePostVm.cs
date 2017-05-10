@@ -16,5 +16,7 @@ namespace PostKek.Models.ViewModels
         public bool IsLiked { get; set; }
         public DateTime DateCreated { get; set; }
         public ICollection<Comment> Comments { get; set; }
+        public User User { get; set; }
+        public string CurrentUserId { get; set; }
     }
 }

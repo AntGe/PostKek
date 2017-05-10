@@ -2,11 +2,11 @@
 @{
     ViewBag.Title = "SinglePost";
 }
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script> 
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>  
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 <h2>SinglePost</h2>
 <div class="col-xs-12 col-sm-8">
-    <section> 
+    <section>
         <article>
             <img src="@Model.PictureURL" alt="img" class="img-responsive">
             <div class="info">
@@ -18,17 +18,21 @@
         </article>
     </section>
     <section>
-                @Ajax.ActionLink("ShowComments", "GetCommentsForPost",
+        @Ajax.ActionLink("ShowComments", "GetCommentsForPost",
        new { id = Model.Id }, new AjaxOptions()
        {
            HttpMethod = "GET",
            UpdateTargetId = "comments",
            InsertionMode = InsertionMode.Replace
        }
-   )    
+   )
+        @if (ViewContext.HttpContext.User.IsInRole("User") && Model.CurrentUserId == Model.User.IdentityId || ViewContext.HttpContext.User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("Edit post", "edit", "posts", new { id = Model.Id }, null);
+        }
     </section>
     <section>
-        <div id="comments"> 
+        <div id="comments">
         </div>
     </section>
 </div> 

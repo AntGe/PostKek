@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using PostKek.Data;
+using PostKek.Models.BindingModels;
 using PostKek.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -18,20 +19,35 @@ namespace PostKek.Services
         }
         public LikeServices LikeServices { get; set; }
         public UserServices UserServices { get; set; }
-        public void AddPost(string title, string userId, string contents, string pictureURL)
+
+        public void EditAPost(int id, string title , string contents, string pictureURL)
         {
-            UserServices userServices = new UserServices();
+            this.Context.Posts.FirstOrDefault(p => p.Id == id).Title = title;
+            this.Context.Posts.FirstOrDefault(p => p.Id == id).Contents = contents;
+            this.Context.Posts.FirstOrDefault(p => p.Id == id).PictureURL = pictureURL;
+            this.Context.SaveChanges(); 
+        } 
+
+        public EditPostBm GetPostToEdit(int id)
+        {
+            EditPostBm bm = Mapper.Map<Post, EditPostBm>(this.Context.Posts.FirstOrDefault(p => p.Id == id));
+
+            return bm;
+        }
+
+        public void AddPost(string title, string userId, string contents, string pictureURL)
+        { 
             Post post = new Post();
             post.Title = title;
             post.Contents = contents;
             post.PictureURL = pictureURL;
             post.DateCreated = DateTime.Now;
             post.IsDeleted = false;
-            post.UserId = userServices.GetUserByLongId(userId).Id;
+            post.UserId = this.UserServices.GetUserByLongId(userId).Id;
             using (this.Context)
             {
                 this.Context.Posts.Add(post);
-                this.Context.SaveChanges(); 
+                this.Context.SaveChanges();
             }
         }
 
@@ -53,6 +69,18 @@ namespace PostKek.Services
                 postVm.IsLiked = post.Likes.Any(l => l.UserId == user.Id);
             }
             return postVm;
+        }
+
+        public StatusReportVm AddCommentToPost(int postId, string userId, string comment)
+        {
+            this.Context.Posts.FirstOrDefault(p => p.Id == postId).Comments.Add(new Comment()
+            {
+                UserId = this.UserServices.GetUserByLongId(userId).Id,
+                PostId = postId,
+                Contents = comment
+            });
+            this.Context.SaveChanges();
+            return new StatusReportVm() { Status = "Comment added!" };
         }
 
         public IEnumerable<SinglePostVm>GetAllPosts()

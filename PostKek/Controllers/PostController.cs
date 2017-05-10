@@ -13,7 +13,7 @@ using System.Web.Mvc;
 namespace PostKek.Controllers
 {
      
-    [RoutePrefix("Posts")]
+    [RoutePrefix("posts")]
     public class PostController : Controller
     { 
         public PostController()
@@ -32,11 +32,27 @@ namespace PostKek.Controllers
         {
             return View();
         }
-
-        // GET: Post/Details/5
-        public ActionResult Details(int id)
+         
+        public PartialViewResult AddComment(int id, string comment)
         {
-            return View();
+            StatusReportVm vm = this.services.AddCommentToPost(id, User.Identity.GetUserId(), comment);
+            return PartialView("_StatusReport", vm);
+        }
+
+        [HttpGet]
+        [Route("edit/{id:int}")]
+        public ActionResult EditPost(int id)
+        {
+            EditPostBm vm = this.services.GetPostToEdit(id); 
+            return View(vm);
+        }
+
+        [HttpPost]
+        [Route("edit/{id:int}")]
+        public ActionResult EditPost([Bind(Include = "Title, Contents, PictureURL, Id, User")] EditPostBm bind, int id)
+        {
+            this.services.EditAPost(id, bind.Title, bind.Contents, bind.PictureURL); 
+            return View(bind);
         }
 
         [HttpGet]
@@ -44,6 +60,7 @@ namespace PostKek.Controllers
         public ActionResult SinglePost(int id)
         {
             SinglePostVm vm = this.services.GetPostById(id, User.Identity.GetUserId());
+            vm.CurrentUserId = User.Identity.GetUserId();
             return View(vm);
         }
 
@@ -86,29 +103,7 @@ namespace PostKek.Controllers
             { 
                 return View();
             }
-        }
-
-        // GET: Post/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Post/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        } 
 
         // GET: Post/Delete/5
         public ActionResult Delete(int id)

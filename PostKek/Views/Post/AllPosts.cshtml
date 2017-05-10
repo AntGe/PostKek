@@ -3,20 +3,36 @@
 @{
     ViewBag.Title = "AllPosts";
 }   
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <h2>AllPosts</h2>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
 @foreach (var item in Model)
-{  
-        <article>
-            <img src="@item.PictureURL" alt="No image" class="img-responsive">
-            <div class="info">
-                <h2>Title. This is title. Here is title!</h2>
-                <span>@item.DateCreated</span> 
-                <p>@item.Contents</p> 
-            </div>
-        </article>  
-    <section>    
-    </section> 
+{
+    <article>
+        <a href="@Url.Action("SinglePost", new { id = @item.Id })">
+            <img src="@Url.Content(@item.PictureURL)" , alt="View Post" width="300" height="250" />
+        </a>
+        <div class="info">
+            <h2>@item.Title</h2>
+            <span>@item.DateCreated</span>
+            <p>@item.Contents</p>
+        </div>
+        <div id="@item.Id"></div>
+        @using (Ajax.BeginForm("AddComment", new { Id = @item.Id },
+                    new AjaxOptions
+                    {
+                        HttpMethod = "Post",
+                        UpdateTargetId =""+@item.Id,
+                        InsertionMode = InsertionMode.Replace,
+                        OnFailure = "OnFailure",
+                        OnSuccess = "OnSuccess"
+                    }))
+        {
+            <input type="text" name="Comment" />
+            <button type="submit">Add Comment</button>
+        }
+    </article> 
 } 
