@@ -16,13 +16,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("PostKek", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <ul class="nav navbar-nav"> 
                     <li>@Html.ActionLink("All Posts", "AllPosts", "Post")</li>
-                    <li>@Html.ActionLink("Add Post", "AddPost", "Post")</li>
+                    <li>@Html.ActionLink("Add Post", "AddPost", "Post")</li> 
+                    @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("View Users", "All", "Users")</li> 
+                    }) 
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

@@ -51,12 +51,19 @@ namespace PostKek.Controllers
         [Route("edit/{id:int}")]
         public ActionResult EditPost([Bind(Include = "Title, Contents, PictureURL, Id, User")] EditPostBm bind, int id)
         {
-            this.services.EditAPost(id, bind.Title, bind.Contents, bind.PictureURL); 
-            return View(bind);
+            if (ModelState.IsValid)
+            {
+                this.services.EditAPost(id, bind.Title, bind.Contents, bind.PictureURL);
+                return View(bind);
+            }
+            else
+            {
+                return View(bind);
+            }
         }
 
         [HttpGet]
-        [Route("{id:int}")] 
+        [Route("single/{id:int}")] 
         public ActionResult SinglePost(int id)
         {
             SinglePostVm vm = this.services.GetPostById(id, User.Identity.GetUserId());
@@ -67,7 +74,7 @@ namespace PostKek.Controllers
         [HttpGet] 
         public PartialViewResult GetCommentsForPost(int id)
         {
-            IEnumerable<SingleCommenVm> vms = this.services.GetCommentsForPost(id);
+            IEnumerable<SingleCommenVm> vms = this.services.GetCommentsForPost(id); 
             return PartialView("_CommentsSection", vms);
         }
 
@@ -81,7 +88,7 @@ namespace PostKek.Controllers
 
         [HttpGet]
         [Route("add")]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult AddPost()
         {  
             return this.View();
@@ -89,7 +96,7 @@ namespace PostKek.Controllers
 
         [HttpPost]
         [Route("add")]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult AddPost([Bind(Include = "Title, Contents, PictureURL")] AddPostBm bind)
         { 
             if (this.ModelState.IsValid)

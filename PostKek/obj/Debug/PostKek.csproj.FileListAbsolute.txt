@@ -124,3 +124,8 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\rosly
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\roslyn\vbc.exe.config
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek\bin\roslyn\vbc.rsp
+C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek\bin\Ninject.dll
+C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek\bin\Ninject.Web.Common.dll
+C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek\bin\WebActivatorEx.dll
+C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek\bin\Ninject.xml
+C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek\bin\Ninject.Web.Common.xml

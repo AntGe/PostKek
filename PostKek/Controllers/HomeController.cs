@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PostKek.Models.ViewModels;
+using PostKek.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +10,16 @@ namespace PostKek.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController()
+        {
+            this.PostServices = new PostServices();
+        }
+
+        public PostServices PostServices { get; set; }
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+            IEnumerable<SinglePostVm> vms = this.PostServices.GetTopLikedPosts();
+            return View(vms);
+        } 
     }
 }

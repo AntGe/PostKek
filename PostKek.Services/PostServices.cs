@@ -89,5 +89,12 @@ namespace PostKek.Services
             IEnumerable<SinglePostVm> postsVms = Mapper.Map<IEnumerable<Post>, IEnumerable<SinglePostVm>>(posts); 
             return postsVms;
         }
+         
+        public IEnumerable<SinglePostVm> GetTopLikedPosts()
+        {
+            IEnumerable<Post> posts = this.Context.Posts.OrderByDescending(p => p.Comments.Count).Take(3);
+            IEnumerable<SinglePostVm> postsVms = Mapper.Map<IEnumerable<Post>, IEnumerable<SinglePostVm>>(posts);
+            return postsVms;
+        }
     }
 }
