@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using PostKek.Data;
+using PostKek.Models.BindingModels;
 using PostKek.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace PostKek
                 expression.CreateMap<Post, SinglePostVm>();
                 expression.CreateMap<Comment, SingleCommenVm>();
                 expression.CreateMap<User, IndexViewModel>();
+                expression.CreateMap<Post, EditPostBm>();
             });
         }
     }
