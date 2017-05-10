@@ -65,5 +65,10 @@ namespace PostKek.Services
             }
         }
 
+        public IEnumerable<SingleUserVm> GetAllUsers()
+        { 
+            return Mapper.Map<IEnumerable<User>, IEnumerable<SingleUserVm>>(this.Context.Users);
+        }
+
     }
 }

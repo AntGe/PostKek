@@ -31,6 +31,7 @@ namespace PostKek
                 expression.CreateMap<Comment, SingleCommenVm>();
                 expression.CreateMap<User, IndexViewModel>();
                 expression.CreateMap<Post, EditPostBm>();
+                expression.CreateMap<User, SingleUserVm>();
             });
         }
     }
