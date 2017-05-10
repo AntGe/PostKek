@@ -61,6 +61,21 @@ namespace PostKek.Controllers
                 return View(bind);
             }
         }
+         
+        [Route("delete/{id:int}")]
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult DeletePost(int id)
+        {
+            if (this.services.DeletePostPermanently(id) == "success")
+            {
+                return this.View();
+            }
+            else
+            { 
+                return this.RedirectToAction("all");
+            }
+
+        }
 
         [HttpGet]
         [Route("single/{id:int}")] 

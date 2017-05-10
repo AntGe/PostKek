@@ -8,8 +8,4 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bi
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\PostKek.Data.pdb
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\EntityFramework.xml
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\Ninject.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\Ninject.Web.Common.dll
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\WebActivatorEx.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\Ninject.xml
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Models\bin\Debug\Ninject.Web.Common.xml
