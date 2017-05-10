@@ -9,8 +9,4 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\Debug\PostKek.Data.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Data\obj\Debug\PostKek.Data.pdb
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\Ninject.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\Ninject.Web.Common.dll
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\WebActivatorEx.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\Ninject.xml
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Data\bin\Debug\Ninject.Web.Common.xml

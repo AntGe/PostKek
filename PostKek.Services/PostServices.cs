@@ -34,6 +34,21 @@ namespace PostKek.Services
 
             return bm;
         }
+         
+        public string DeletePostPermanently(int id)
+        {
+            Post toDelete = this.Context.Posts.FirstOrDefault(p => p.Id == id);
+            if (toDelete != null)
+            {
+                this.Context.Posts.Remove(toDelete);
+                this.Context.SaveChanges();
+                return "success";
+            }
+            else
+            {
+                return "failure";
+            }
+        }
 
         public void AddPost(string title, string userId, string contents, string pictureURL)
         { 

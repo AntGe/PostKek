@@ -15,8 +15,4 @@ C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\AutoMapper.dll
 C:\Users\Antonio\documents\visual studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\AutoMapper.xml
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\Ninject.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\Ninject.Web.Common.dll
 C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\WebActivatorEx.dll
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\Ninject.xml
-C:\Users\Antonio\Documents\Visual Studio 2015\Projects\PostKek\PostKek.Services\bin\Debug\Ninject.Web.Common.xml

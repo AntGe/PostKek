@@ -29,6 +29,7 @@
         @if (ViewContext.HttpContext.User.IsInRole("User") && Model.CurrentUserId == Model.User.IdentityId || ViewContext.HttpContext.User.IsInRole("Admin"))
         {
             @Html.ActionLink("Edit post", "edit", "posts", new { id = Model.Id }, null);
+            @Html.ActionLink("Delete post", "delete", "posts", new { id = Model.Id }, null);
         }
     </section>
     <section>
