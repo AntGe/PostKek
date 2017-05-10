@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using PostKek.Models;
+using PostKek.Services;
+using PostKek.Models.ViewModels;
 
 namespace PostKek.Controllers
 {
@@ -64,14 +66,8 @@ namespace PostKek.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
-            var model = new IndexViewModel
-            {
-                HasPassword = HasPassword(),
-                PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
-                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
-                Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
-            };
+            UserServices services = new UserServices();
+            IndexViewModel model = services.GetUserVmByLongId(userId);
             return View(model);
         }
 

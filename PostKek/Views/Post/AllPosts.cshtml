@@ -1,0 +1,22 @@
+﻿@model IEnumerable<PostKek.Models.ViewModels.SinglePostVm>
+
+@{
+    ViewBag.Title = "AllPosts";
+}   
+    <h2>AllPosts</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+@foreach (var item in Model)
+{  
+        <article>
+            <img src="@item.PictureURL" alt="No image" class="img-responsive">
+            <div class="info">
+                <h2>Title. This is title. Here is title!</h2>
+                <span>@item.DateCreated</span> 
+                <p>@item.Contents</p> 
+            </div>
+        </article>  
+    <section>    
+    </section> 
+} 

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PostKek.Models.ViewModels.SingleCommenVm>  
+@foreach (var item in Model)
+{
+    <div class="particular-comment">
+        <div class="profile"> 
+                <span class="profile-name">@item.User.Name</span> 
+        </div>
+        <div class="comment-self">
+            <span>
+                <p>@item.Contents</p> 
+            </span>
+        </div>
+    </div>
+} 
