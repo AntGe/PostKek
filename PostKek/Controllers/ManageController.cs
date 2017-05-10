@@ -51,9 +51,7 @@ namespace PostKek.Controllers
                 _userManager = value;
             }
         }
-
-        //
-        // GET: /Manage/Index
+         
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -66,16 +64,12 @@ namespace PostKek.Controllers
             IndexViewModel model = services.GetUserVmByLongId(userId);
             return View(model);
         }
-         
-        //
-        // GET: /Manage/ChangePassword
+          
         public ActionResult ChangePassword()
         {
             return View();
         }
-
-        //
-        // POST: /Manage/ChangePassword
+         
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)

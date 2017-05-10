@@ -315,7 +315,6 @@
     <Content Include="Views\Post\AddPost.cshtml" />
     <Content Include="Views\Post\SinglePost.cshtml" />
     <Content Include="Views\Post\AllPosts.cshtml" />
-    <Content Include="Views\Shared\_Comment.cshtml" />
     <Content Include="Views\Shared\_CommentsSection.cshtml" />
     <Content Include="Views\Shared\_StatusReport.cshtml" />
     <Content Include="Views\Post\EditPost.cshtml" />

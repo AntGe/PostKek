@@ -54,7 +54,7 @@ namespace PostKek.Controllers
             if (ModelState.IsValid)
             {
                 this.services.EditAPost(id, bind.Title, bind.Contents, bind.PictureURL);
-                return View(bind);
+                return this.RedirectToAction("Index", "Home");
             }
             else
             {
